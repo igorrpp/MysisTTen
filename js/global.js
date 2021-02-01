@@ -31,7 +31,7 @@ function mainApp() {
 function popupCookie(seconds) {
 
     // Se já aceitou cookies antes
-    if (Cookies.get('accept-cokies') == 'accept') {
+    if (Cookies.get('accept-cookies') == 'accept') {
 
         // Sai sem fazer nada
         return false;
@@ -81,7 +81,7 @@ function acceptCookies() {
     $('#cookie-wrap').hide('fast', () => {
 
         // Grava cookie de aceite
-        Cookies.set('accept-cokies', 'accept', { expires: 365, path: '/' })
+        Cookies.set('accept-cookies', 'accept', { expires: 365, path: '/' })
     });
 }
 
