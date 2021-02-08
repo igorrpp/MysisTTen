@@ -45,16 +45,17 @@ if ($_C['pageJS'] == '') {
     <div class="wrap">
 
         <header>
-            <a href="/" title="Empereza - Página inicial"><img src="./img/logo03.png" alt="Empereza - Mysisten"></a>
-            <h1>MysisTTen <?php echo $_C['siteName'] ?><small><?php echo $_C['siteSlogan'] ?></small></h1>
+            <a href="/" title="<?php echo $_C['siteName'] ?> - Página inicial"><img src="./img/logo03.png" alt="<?php echo $_C['siteName'] ?> - Intranet"></a>
+            <h1>Intranet <?php echo $_C['siteName'] ?><small><?php echo $_C['siteSlogan'] ?></small></h1>
         </header>
 
         <nav>
             <a href="/" title="Página inicial"><i class="fas fa-fw fa-home"></i><span>Início</span></a>
             <a href="/noticias.php" title="Notícias atualizadas"><i class="fas fa-fw fa-newspaper"></i><span>Notícias</span></a>
             <a href="/contatos.php" title="Faça contato conosco"><i class="fas fa-fw fa-mail-bulk"></i><span>Contatos</span></a>
-            <a href="/sugestao.php" title="Faça contato conosco"><i class="fas fa-fw fa-mail-bulk"></i><span>Sugestões</span></a>
-            <a href="/sobre.php" title="Sobre a Empereza"><i class="fas fa-fw fa-info-circle"></i><span>Sobre</span></a>
+            <a href="/sobre.php" title="Sobre a MySistTen"><i class="fas fa-fw fa-info-circle"></i><span>Sobre nós</span></a>
+            <a href="/maps.php" title="Nossa Localização"><i class="fas fa-fw fa-map"></i><span>Localização</span></a>
+          
         </nav>
 
         <main>

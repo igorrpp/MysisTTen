@@ -1,1 +1,41 @@
 /***** CSS de index.php *****/
+
+.artigo {
+    overflow: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.artigo:nth-child(even) {
+    background: rgba(0, 20, 65, 0.288);
+}
+
+.artigo:nth-child(odd) {
+    background: rgba(0, 0, 0, .2);
+}
+
+.artigo:hover {
+    background: rgba(4, 2, 26, 0.904);
+    color: white;
+}
+
+.artigo img {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-right: .5rem;
+}
+
+.artigo h3 {
+    margin: 0 0 .4rem 0;
+}
+
+.artigo div {
+    padding: .5rem;
+}
+
+.linklist {
+    font-size: .9rem;
+    padding: 0 0 0 1.5rem;
+}

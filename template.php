@@ -6,13 +6,13 @@ require('./_config.php');
 /***** Configurações desta página *****/
 
 // Título da página
-$_C['pageTitle'] = 'Conexão com o mundo';
+$_C['pageTitle'] = 'Template do site';
 
 // CSS desta página
-$_C['pageCSS'] = 'index.css';
+$_C['pageCSS'] = 'template.css';
 
 // JavaScript desta página
-$_C['pageJS'] = '';
+$_C['pageJS'] = 'template.js';
 
 /***** Aqui entra o código PHP desta página *****/
 

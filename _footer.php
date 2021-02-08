@@ -6,7 +6,7 @@
 
         <a href="/" title="Ir para a página inicial."><i class="fas fa-fw fa-home"></i></a>
         <div>
-            &copy; Copyright 2021 Igor Rodrigues Pires
+            <?php echo $_C['copyright'] ?>
             <small>Todos os direitos reservados</small>
         </div>
         <a href="#top" title="ir para o topo desta página."><i class="fas fa-fw fa-arrow-alt-circle-up"></i></a>
@@ -18,14 +18,20 @@
         <!-- Menu de redes sociais -->
         <div class="social">
             <?php
-
-            // Links das redes sociais
+ 
+            // Links das redes sociais gerados dinamicamente
             $socials = array('facebook', 'youtube', 'twitter', 'instagram');
             $socialLinks = '';
             foreach($socials as $link) {
                 if (isset($_C[$link])) {
-                    $socialName = ucfirst($link);
-                    $socialLinks .= "<a href=\"{$_C[$link]}\" target=\"_blank\" title=\"{$_C['siteName']} no {$socialName}.\"><i class=\"fab fa-fw fa-{$link}-square\"></i><span>{$socialName}</span></a>\n";
+                    $socialName = ucfirst($link); // facebook --> Facebook
+                    $socialLinks .= <<<LINK
+<a href="{$_C[$link]}" target="_blank" title="{$_C['siteName']} no {$socialName}.">
+    <i class="fab fa-fw fa-{$link}-square"></i>
+    <span>{$socialName}</span>
+</a>
+
+LINK;
                 }
             }
             echo $socialLinks;
@@ -34,10 +40,10 @@
 
         <!-- Menu de acesso rápido -->
         <div class="tools">
-            <a href="/sobre_empereza.php" title="Sobre o Empereza."><i class="fas fa-fw fa-building"></i><span>Sobre agente</span></a>
-            <a href="/sobre_site.php" title="Sobre este site."><i class="fas fa-fw fa-globe"></i><span>Sobre o Site</span></a>
+            <a href="/sobre.php?id=1" title="Sobre o <?php echo $_C['siteName'] ?>."><i class="fas fa-fw fa-building"></i><span>Sobre agente</span></a>
+            <a href="/sobre.php?id=2" title="Sobre este site."><i class="fas fa-fw fa-globe"></i><span>Sobre o Site</span></a>
             <a href="/contatos.php" title="Faça contato com a Empereza."><i class="fas fa-fw fa-mail-bulk"></i><span>Faça Contato</span></a>
-            <a href="/privacidade.php" title="Sobre sua privacidade."><i class="fas fa-fw fa-unlock-alt"></i><span>Sua Privacidade</span></a>
+            <a href="/sobre.php?id=3" title="Sobre sua privacidade."><i class="fas fa-fw fa-unlock-alt"></i><span>Sua Privacidade</span></a>
         </div>
 
     </div>

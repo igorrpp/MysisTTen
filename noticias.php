@@ -6,7 +6,7 @@ require('./_config.php');
 /***** Configurações desta página *****/
 
 // Título da página
-$_C['pageTitle'] = 'Noticias';
+$_C['pageTitle'] = 'Notícias Atualizadas';
 
 // CSS desta página
 $_C['pageCSS'] = 'noticias.css';
@@ -24,26 +24,12 @@ require('./_header.php');
 
 <article>
 
-    <h2>Noticias Recentes</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam debitis quis doloremque
-        illo ab dolorem sed, ducimus reprehenderit? Culpa nulla tempora numquam quo quae explicabo harum
-        possimus cum porro?</p>
-    <picture>
-        <img class="flush" src="https://picsum.photos/400/300" alt="Imagem aleatória">
-    </picture>
-    <p><a href="/">Link de teste</a></p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ut ex voluptatibus, quibusdam,
-        consectetur neque enim iure aliquid cum dolore alias error facere deserunt quos itaque dolorem
-        inventore officiis fugit.</p>
+    <h2><?php echo $_C['pageTitle'] ?></h2>
+    <p>Últimas notícias do Brasil e do mundo no Google News sobre '<span id="keyword"></span>'.</p>
+    <div id="news"></div>
 
 </article>
 
-<aside>
-
-    <h3>Sidebar</h3>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident necessitatibus atque.</p>
-
-</aside>
 
 <?php
 
